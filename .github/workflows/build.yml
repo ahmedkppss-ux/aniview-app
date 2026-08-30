@@ -8,6 +8,39 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - name: Create Flutter Project Structure
+        run: |
+          mkdir -p android/app
+          cat << 'EOF' > android/app/build.gradle
+          apply plugin: 'com.android.application'
+          android {
+              compileSdkVersion 33
+              defaultConfig {
+                  applicationId "com.example.aniview_app"
+                  minSdkVersion 21
+                  targetSdkVersion 33
+                  versionCode 1
+                  versionName "1.0"
+              }
+          }
+          EOF
+          cat << 'EOF' > android/build.gradle
+          buildscript {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+              dependencies {
+                  classpath 'com.android.tools.build:gradle:7.3.0'
+              }
+          }
+          allprojects {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+          }
+          EOF
       - run: flutter build apk --release
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v3
