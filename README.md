@@ -1,2 +1,2 @@
-# aniview
+# aniview-app
 تطبيق أنيفيو
