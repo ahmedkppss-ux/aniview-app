@@ -1,0 +1,16 @@
+name: aniview_app
+description: A new Flutter project for ANIVIEW.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+
+flutter:
+  uses-material-design: true
