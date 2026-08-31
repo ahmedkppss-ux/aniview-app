@@ -1,45 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AniViewApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AniViewApp extends StatelessWidget {
+  const AniViewApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ANIVIEW',
+      title: 'AniView',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        primaryColor: Colors.purple,
-        scaffoldBackgroundColor: const Color(0xFF0F0F1E),
+        scaffoldBackgroundColor: const Color(0xFF0A0E17),
+        primaryColor: const Color(0xFF8A2BE2),
       ),
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ANIVIEW - أنيفيو'),
-        backgroundColor: Colors.purple[900],
-      ),
-      body: const Center(
-        child: Text(
-          'مرحباً بك في تطبيق أنيفيو الأسطوري\nالسيرفر التلقائي متصل وجاهز',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.purpleAccent),
+      home: const Scaffold(
+        body: Center(
+          child: Text(
+            'مرحباً بك في تطبيق أني فيو المحدث',
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
         ),
       ),
     );
   }
 }
-
-  
