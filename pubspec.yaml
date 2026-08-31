@@ -1,16 +1,19 @@
 name: aniview_app
-description: A new Flutter project for ANIVIEW.
-publish_to: 'none'
+description: A premier Anime, Movies, and Series streaming application.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.2.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  http: ^1.1.0
+  
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.0
+  shared_preferences: ^2.2.3
 
-flutter:
-  uses-material-design: true
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
